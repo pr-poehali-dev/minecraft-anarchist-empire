@@ -1,0 +1,29 @@
+{
+  "tests": [
+    {
+      "name": "Get privileges list",
+      "method": "GET",
+      "path": "/?action=privileges",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "privileges": "array"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Login with valid credentials",
+      "method": "POST",
+      "path": "/?action=login",
+      "body": {
+        "username": "skzry",
+        "password": "568876Qqq"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "token": "string",
+        "username": "skzry"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
